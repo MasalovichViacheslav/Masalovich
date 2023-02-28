@@ -104,3 +104,59 @@
 #     some_str += 'person' + ';' + str(key) + ';' + str(value) + ';' + '\n'
 # with open('Task 6 file.csv', 'w', encoding='UTF-8') as file_csv:
 #     file_csv.write(some_str)
+'''
+Задача 7
+Напишите программу, которая считывает текст из файла (в файле может быть больше одной строки) и выводит самое частое 
+слово в этом тексте и через пробел то, сколько раз оно встретилось. Если таких слов несколько, вывести 
+лексикографически первое. Для решение вам необходимо открыть файл для чтения 7.txt .
+Слова, написанные в разных регистрах, считаются одинаковыми.
+
+Sample Input:
+abc a bCd bC AbC BC BCD bcd ABC
+Sample Output:
+abc 3
+'''
+# with open('7.txt', 'r', encoding='utf-8') as file:
+#     lst = file.read().lower().replace('\n', ' ').split()
+# dict1 = {}
+# for elem in lst:
+#     dict1[elem] = lst.count(elem)
+# maximum = 0
+# for value in dict1.values():
+#     if value > maximum:
+#         maximum = value
+# dict2 = {}
+# for key, value in dict1.items():
+#     if value == maximum:
+#         dict2[key] = value
+# minimal = '~' if '~' not in dict1 else print('Присвоить другое значение minimal')  # вывод пары "ключ-значение" с
+# # лексиграфически первым ключом, если в dict2 несколько ключей
+# for key in dict2:
+#     if key < minimal:
+#         minimal = key
+# print(minimal, dict2[minimal])
+'''
+Задача 8
+Вашей задачей будет восстановление исходной строки обратно. Напишите программу, которая считывает из файла строку, 
+соответствующую тексту, сжатому с помощью кодирования повторов, и производит обратную операцию, получая исходный текст. 
+Для решение вам необходимо открыть файл для чтения 8.txt .
+
+Sample Input:
+a3b4c2e10b1
+Sample Output:
+Aaabbbbcceeeeeeeeeeb 
+'''
+# input_str = ''
+# with open('8.txt', 'r', encoding='UTF-8') as file:
+#     input_str = file.read()
+# temp_str = ''
+# for elem in input_str:
+#     if elem.isalpha():
+#         temp_str += ' ' + elem
+#     else:
+#         temp_str += elem
+# lst = temp_str.lstrip().split()
+# output_str = ''
+# for elem in lst:
+#     output_str += elem[0] * int(elem[1:])
+# print(output_str)
