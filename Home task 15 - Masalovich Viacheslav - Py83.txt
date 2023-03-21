@@ -1,0 +1,353 @@
+===============================================================================
+
+Создание таблицы для решения задач
+
+CREATE TABLE actors 
+( 
+actor_ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+name TEXT, 
+surname TEXT, 
+age INTEGER, 
+sex TEXT, 
+movie TEXT, 
+movie_release_year INTEGER, 
+movie_rating REAL, 
+actor_fees_in_movie_USD INTEGER,
+movie_budget_USD INTEGER,
+movie_worldwide_gross_USD INTEGER
+);
+INSERT INTO actors(name, surname, age, sex, movie, movie_release_year, movie_rating, actor_fees_in_movie_USD, movie_budget_USD, movie_worldwide_gross_USD) VALUES
+('Tom', 'Cruise', 60, 'm', 'Interview with the Vampire', 1994, 7.5, 2500000, 60000000, 223664608),
+('Tom', 'Cruise', 60, 'm', 'Eyes Wide Shut', 1999, 7.5, 3000000, 65000000, 162000000),
+('Tom', 'Cruise', 60, 'm', 'Rain Man', 1988, 8.0, 850000, 25000000, 354825435),
+('Brad', 'Pitt', 59, 'm', 'Interview with the Vampire', 1994, 7.5, 2750000, 60000000, 223664608),
+('Brad', 'Pitt', 59, 'm', '12 monkeys', 1995, 8.8, 900000, 29000001, 168839459),
+('Brad', 'Pitt', 59, 'm', 'Once Upon a Time in... Hollywood', 2019, 8.0, 5500000, 90000000, 377426903),
+('Johnny', 'Depp', 59, 'm', 'Pirates of the Caribbean: The Curse of the Black Pearl', 2003, 8.1, 8500000, 140000000, 654264015),
+('Johnny', 'Depp', 59, 'm', 'Gilbert Grape', 1993, 7.7, 550000, 11000000, 10032765),
+('Johnny', 'Depp', 59, 'm', 'O Turista', 2010, 6.0, 9000000, 100000000, 278346189),
+('Bruce', 'Willis', 68, 'm', '12 monkeys', 1995, 8.8, 2200000, 29000001, 168839459),
+('Bruce', 'Willis', 68, 'm', 'The Fifth Element', 1997, 7.6, 7500000, 90000000, 263920180),
+('Bruce', 'Willis', 68, 'm', 'The Sixth Sense', 1999, 8.2, 6000000, 40000000, 672806292),
+('Leonardo', 'DiCaprio', 48, 'm', 'Titanic', 1997, 7.9, 4750000, 200000000, 2216990964),
+('Leonardo', 'DiCaprio', 48, 'm', 'Gilbert Grape', 1993, 7.7, 450000, 11000000, 10032765),
+('Leonardo', 'DiCaprio', 48, 'm', 'Once Upon a Time in... Hollywood', 2019, 8.0, 8300000, 90000000, 377426903),
+('Margot', 'Robbie', 32, 'f', 'Once Upon a Time in... Hollywood', 2019, 8.0, 2000000, 90000000, 377426903),
+('Margot', 'Robbie', 32, 'f', 'Suicide Squad', 2016, 5.9, 1750000, 175000000, 746846894),
+('Margot', 'Robbie', 32, 'f', 'Focus', 2014, 6.6, 950000, 50100000, 158762963),
+('Nicole', 'Kidman', 55, 'f', 'Eyes Wide Shut', 1999, 7.5, 1900000, 65000000, 162000000),
+('Nicole', 'Kidman', 55, 'f', 'The Others', 2001, 7.6, 1500000, 17000000, 209947037),
+('Nicole', 'Kidman', 55, 'f', 'Aquaman', 2018, 6.8, 1100000, 160000000, 1148461807),
+('Angelina', 'Jolie', 47, 'f', 'O Turista', 2010, 6.0, 4500000, 100000000, 278346189),
+('Angelina', 'Jolie', 47, 'f', 'Gone in Sixty Seconds', 2000, 6.5, 2100000, 90000000, 237202299),
+('Angelina', 'Jolie', 47, 'f', 'Maleficent', 2014, 6.9, 9200000, 180000000, 758410378);
+
+===============================================================================
+
+Задача 1.
+
+Создать колонку finance REAL, заполнить значение банковских счетов актёров.
+
+
+Решение задачи 1.
+
+ALTER TABLE actors
+ADD COLUMN finance REAL;
+UPDATE actors
+SET finance = 50469303.33
+WHERE actor_ID = 1;
+UPDATE actors
+SET finance = 50469303.33
+WHERE actor_ID = 2;
+UPDATE actors
+SET finance = 50469303.33
+WHERE actor_ID = 3;
+UPDATE actors
+SET finance = 67458756.50
+WHERE actor_ID = 4;
+UPDATE actors
+SET finance = 67458756.50
+WHERE actor_ID = 5;
+UPDATE actors
+SET finance = 67458756.50
+WHERE actor_ID = 6;
+UPDATE actors
+SET finance = 45687097.00
+WHERE actor_ID = 7;
+UPDATE actors
+SET finance = 45687097.00
+WHERE actor_ID = 8;
+UPDATE actors
+SET finance = 45687097.00
+WHERE actor_ID = 9;
+UPDATE actors
+SET finance = 39456833.23
+WHERE actor_ID = 10;
+UPDATE actors
+SET finance = 39456833.23
+WHERE actor_ID = 11;
+UPDATE actors
+SET finance = 39456833.23
+WHERE actor_ID = 12;
+UPDATE actors
+SET finance = 89453221.90
+WHERE actor_ID = 13;
+UPDATE actors
+SET finance = 89453221.90
+WHERE actor_ID = 14;
+UPDATE actors
+SET finance = 89453221.90
+WHERE actor_ID = 15;
+UPDATE actors
+SET finance = 12345987.01
+WHERE actor_ID = 16;
+UPDATE actors
+SET finance = 12345987.01
+WHERE actor_ID = 17;
+UPDATE actors
+SET finance = 12345987.01
+WHERE actor_ID = 18;
+UPDATE actors
+SET finance = 30212345.45
+WHERE actor_ID = 19;
+UPDATE actors
+SET finance = 30212345.45
+WHERE actor_ID = 20;
+UPDATE actors
+SET finance = 30212345.45
+WHERE actor_ID = 21;
+UPDATE actors
+SET finance = 32456234.99
+WHERE actor_ID = 22;
+UPDATE actors
+SET finance = 32456234.99
+WHERE actor_ID = 23;
+UPDATE actors
+SET finance = 32456234.99
+WHERE actor_ID = 24;
+
+===============================================================================
+ 
+Задача 2.
+
+Переименовать колонку finance в finance_actors. Добавить колонку city, где проживают актёры в данный момент и внести все изменения в таблицу.
+
+
+Решение задачи 2.
+
+ALTER TABLE actors
+RENAME COLUMN finance TO finance_actors;
+ALTER TABLE actors
+ADD COLUMN city TEXT;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 1;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 2;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 3;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 4;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 5;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 6;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 7;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 8;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 9;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 10;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 11;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 12;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 13;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 14;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 15;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 16;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 17;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 18;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 19;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 20;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 21;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 22;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 23;
+UPDATE actors
+SET city = 'Лос-Анджелес'
+WHERE actor_ID = 24;
+
+===============================================================================
+
+Задача 3.
+
+Добавить несколько актёров мужского и женского пола, которые снимались в фильмах, которые мы написали. Добавить ещё несколько известных актёров и фильмов с их участием.
+
+
+Решение задачи 3.
+
+INSERT INTO actors(name, surname, age, sex, movie, movie_release_year, movie_rating, actor_fees_in_movie_USD, movie_budget_USD, movie_worldwide_gross_USD, finance_actors, city) VALUES
+('Milla', 'Jovovich', 47, 'f', 'The Fifth Element', 1997, 7.6, 3500000, 90000000, 263920180, 22546543.87, 'Лос-Анджелис'),
+('Milla', 'Jovovich', 47, 'f', 'Resident Evil', 2002, 6.6, 3500000, 33000000, 102984862, 22546543.87, 'Лос-Анджелис'),
+('Orlando', 'Bloom', 46, 'm', 'Pirates of the Caribbean: The Curse of the Black Pearl', 2003, 8.1, 3400000, 140000000, 654264015, 35284666.05, 'Лос-Анджелис'),
+('Orlando', 'Bloom', 46, 'm', 'The Lord of the Rings: The Return of the King', 2003, 9.0, 3100000, 94000000, 1146457748, 35284666.05, 'Лос-Анджелис');
+
+===============================================================================
+
+Задача 4.
+
+Вывести всех актёров которые снимались в период с 1990 по 2000 год. Актёры должны быть выведены только 1 раз.
+
+
+Решение задачи 4.
+
+SELECT DISTINCT name, surname FROM actors
+WHERE movie_release_year BETWEEN 1990 AND 2000;
+
+===============================================================================
+
+Задача 5.
+
+Вывести все фильмы в которых приняли участие 2 и более актёра из нашей базы данных. Вывод организовать в порядке возрастания фамилий!
+
+
+Решение задачи 5.
+
+SELECT movie, surname, COUNT(*) AS movies_with_actors FROM actors
+GROUP BY movie
+HAVING movies_with_actors >= 2
+ORDER BY surname;
+
+===============================================================================
+
+Задача 6.
+
+Вывести количество актёров мужского пола, которые есть в таблице которые старше 45 лет.
+
+
+Решение задачи 6.
+
+SELECT COUNT(DISTINCT surname) AS actors_elder_45_qty FROM actors
+WHERE sex = 'm' AND age > 45;
+
+===============================================================================
+
+Задача 7.
+
+Вывести всех актёров которые приняли участие в 2-х и более фильмах, которые есть а бд и которые имеют на своём счету 10000000$.
+
+
+Решение задачи 7.
+
+SELECT name, surname, COUNT(*) AS actor_movies_qty FROM actors
+WHERE finance_actors > 10000000
+GROUP BY surname
+HAVING actor_movies_qty >= 2;
+
+===============================================================================
+
+Задача 8.
+
+Вывести общую сумму всех гонораров актёров в фильмах снятых в период с 1995 по 2005 год.
+
+
+Решение задачи 8.
+
+SELECT SUM(actor_fees_in_movie_USD) AS actors_total_fees_USD FROM actors
+WHERE movie_release_year BETWEEN 1995 AND 2005;
+
+===============================================================================
+
+Задача 9.
+
+Вывести фильмы и имена и фамилии актёров, которым на момент выпуска фильма в прокат было меньше 35 лет.
+
+
+Решение задачи 9.
+
+SELECT movie, name, surname from actors
+WHERE movie_release_year - (2023 - age) < 35;
+
+===============================================================================
+
+Задача 10
+
+Вывести все фильмы название которых состоит из 2 слов. Использовать регулярные выражения.
+
+
+Решение задачи 10.
+
+SELECT movie from actors
+WHERE movie glob '* *' AND movie not glob '* * *';
+
+===============================================================================
+
+Задача 11
+
+Вывести  фильмы и общие выплаты актёрам. В порядке убывания общей суммы гонораров. Вывести первые 5 фильмов.
+
+
+Решение задачи 11.
+
+SELECT movie, SUM(actor_fees_in_movie_USD) AS actors_total_fees_per_movie_USD FROM actors
+GROUP BY movie
+ORDER BY actors_total_fees_per_movie_USD DESC
+LIMIT 5
+
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
